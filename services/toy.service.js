@@ -3,30 +3,32 @@ import { utilService } from "./util.service.js"
 
 const toys = utilService.readJsonFile('data/toy.json')
 
-
 export const toyService = {
     query,
     get,
     save,
     remove,
-    // getEmptyToy,
-    // getDefaultFilter,
-    // getLabels
 }
 
 function query(filterBy = {}) {
-    var filteredToys = toys
-    if (!filteredToys) return Promise.reject('Cannot get toys data!')
 
+    let filteredToys = toys
+    if (!filteredToys) return Promise.reject('Cannot get toys data!')
     if (!filterBy.txt) filterBy.txt = ''
+
     if (!filterBy.maxPrice) filterBy.maxPrice = Infinity
+
     const regExp = new RegExp(filterBy.txt, 'i')
+
     filteredToys = filteredToys.filter(toy =>
         regExp.test(toy.name) &&
         toy.price <= filterBy.maxPrice
     )
-    if (filterBy.inStock)
+
+    if (filterBy.inStock === 'true') {
         filteredToys = filteredToys.filter(toy => toy.inStock === true)
+    }
+
     if (filterBy.labels && filterBy.labels.length) {
         filteredToys = filteredToys.filter(toy =>
             filterBy.labels.every(label => toy.labels.includes(label))
@@ -37,7 +39,7 @@ function query(filterBy = {}) {
             return t1.name.localeCompare(t2.name) * filterBy.sortDir
         })
     }
-    else if (filterBy.sortBy === 'price' ||
+    if (filterBy.sortBy === 'price' ||
         filterBy.sortBy === 'createdAt') {
         filteredToys.sort((t1, t2) => {
             return (t1.price - t2.price) * filterBy.sortDir
@@ -61,7 +63,6 @@ function remove(toyId) {
 }
 
 function save(toy) {
-    console.log('toy:', toy)
     if (toy._id) {
         const idx = toys.findIndex(currToy => currToy._id === toy._id)
         toys[idx] = { ...toys[idx], ...toy }
@@ -72,6 +73,7 @@ function save(toy) {
         toys.unshift(toy)
     }
     return _saveToysToFile()
+        .then(() => toy)
 }
 
 function _saveToysToFile() {
