@@ -11,36 +11,6 @@
         "createdAt": 1722425308989
     },
     {
-        "name": "Doll",
-        "price": 2,
-        "labels": [
-            "Box game"
-        ],
-        "_id": "wySYY",
-        "createdAt": 1722424463530,
-        "inStock": true
-    },
-    {
-        "name": "Doll",
-        "price": 2,
-        "labels": [
-            "Box game"
-        ],
-        "_id": "Opl1b",
-        "createdAt": 1722424392645,
-        "inStock": true
-    },
-    {
-        "name": "Doll",
-        "price": 13,
-        "labels": [
-            "Doll"
-        ],
-        "_id": "xjSCU",
-        "createdAt": 1721229305433,
-        "inStock": true
-    },
-    {
         "_id": "t101",
         "name": "Talking Doll",
         "price": 50,
