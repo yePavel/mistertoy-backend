@@ -1,58 +1,19 @@
 [
     {
         "name": "Doll",
-        "price": 1,
+        "price": 101,
+        "inStock": true,
         "labels": [
-            "Box game"
+            "Doll",
+            "Baby"
         ],
-        "_id": "ZvrjO",
-        "createdAt": 1721229849516,
-        "inStock": true
-    },
-    {
-        "name": "Treasure",
-        "price": 3,
-        "labels": [
-            "Doll"
-        ],
-        "_id": "qTo7v",
-        "createdAt": 1721229584154,
-        "inStock": true
-    },
-    {
-        "name": "Treasure",
-        "price": 13,
-        "labels": [
-            "Puzzle"
-        ],
-        "_id": "mRgqz",
-        "createdAt": 1721229416425,
-        "inStock": true
-    },
-    {
-        "name": "Doll",
-        "price": 13,
-        "labels": [
-            "Doll"
-        ],
-        "_id": "xjSCU",
-        "createdAt": 1721229305433,
-        "inStock": true
-    },
-    {
-        "name": "Doll",
-        "price": 1,
-        "labels": [
-            "Doll"
-        ],
-        "_id": "uYvkb",
-        "createdAt": 1721228144463,
-        "inStock": true
+        "_id": "xoR8n",
+        "createdAt": 1722425308989
     },
     {
         "_id": "t101",
         "name": "Talking Doll",
-        "price": 100,
+        "price": 50,
         "labels": [
             "Doll",
             "Baby"
@@ -75,7 +36,7 @@
     {
         "_id": "t103",
         "name": "Lego Set",
-        "price": 79,
+        "price": 60,
         "labels": [
             "On wheels",
             "Battery Powered"
