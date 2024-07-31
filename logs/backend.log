@@ -504,3 +504,5 @@
 31.7.2024, 19:04:54 - ERROR - cannot find toys | MongoServerError: FieldPath cannot be constructed with empty string
 31.7.2024, 19:04:54 - ERROR - Failed to get toys | MongoServerError: FieldPath cannot be constructed with empty string
 31.7.2024, 19:07:19 - INFO - Server listening on port: 3030
+31.7.2024, 19:13:02 - INFO - Server listening on port: 3030
+31.7.2024, 19:13:03 - INFO - Server listening on port: 3030
