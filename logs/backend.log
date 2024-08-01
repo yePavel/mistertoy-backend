@@ -1,0 +1,50 @@
+1.8.2024, 18:28:48 - INFO - Server listening on port: 3030
+1.8.2024, 18:29:16 - INFO - Server listening on port: 3030
+1.8.2024, 18:29:34 - INFO - Server listening on port: 3030
+1.8.2024, 18:30:27 - INFO - Server listening on port: 3030
+1.8.2024, 18:32:06 - INFO - Server listening on port: 3030
+1.8.2024, 18:32:28 - INFO - Server listening on port: 3030
+1.8.2024, 18:33:50 - INFO - Server listening on port: 3030
+1.8.2024, 18:45:20 - INFO - Server listening on port: 3030
+1.8.2024, 18:46:11 - INFO - Server listening on port: 3030
+1.8.2024, 18:46:18 - INFO - Server listening on port: 3030
+1.8.2024, 19:15:53 - INFO - Server listening on port: 3030
+1.8.2024, 19:16:11 - INFO - Server listening on port: 3030
+1.8.2024, 19:47:52 - INFO - Server listening on port: 3030
+1.8.2024, 19:48:33 - INFO - Server listening on port: 3030
+1.8.2024, 19:48:54 - INFO - Server listening on port: 3030
+1.8.2024, 19:48:57 - INFO - Server listening on port: 3030
+1.8.2024, 19:49:47 - INFO - Server listening on port: 3030
+1.8.2024, 19:49:49 - INFO - Server listening on port: 3030
+1.8.2024, 19:49:58 - INFO - Server listening on port: 3030
+1.8.2024, 19:50:09 - INFO - Server listening on port: 3030
+1.8.2024, 19:51:29 - INFO - Server listening on port: 3030
+1.8.2024, 19:52:16 - INFO - Server listening on port: 3030
+1.8.2024, 19:52:20 - INFO - Server listening on port: 3030
+1.8.2024, 19:52:22 - INFO - Server listening on port: 3030
+1.8.2024, 19:52:47 - INFO - Server listening on port: 3030
+1.8.2024, 19:53:21 - INFO - Server listening on port: 3030
+1.8.2024, 19:55:48 - INFO - Server listening on port: 3030
+1.8.2024, 19:56:01 - INFO - Server listening on port: 3030
+1.8.2024, 19:56:03 - INFO - Server listening on port: 3030
+1.8.2024, 19:56:11 - INFO - Server listening on port: 3030
+1.8.2024, 19:58:08 - INFO - Server listening on port: 3030
+1.8.2024, 19:58:34 - INFO - Server listening on port: 3030
+1.8.2024, 19:58:48 - INFO - Server listening on port: 3030
+1.8.2024, 19:59:04 - INFO - Server listening on port: 3030
+1.8.2024, 19:59:06 - INFO - Server listening on port: 3030
+1.8.2024, 19:59:08 - INFO - Server listening on port: 3030
+1.8.2024, 19:59:27 - INFO - Server listening on port: 3030
+1.8.2024, 20:01:57 - INFO - Server listening on port: 3030
+1.8.2024, 20:02:00 - INFO - Server listening on port: 3030
+1.8.2024, 20:02:20 - INFO - Server listening on port: 3030
+1.8.2024, 20:08:08 - ERROR - Failed to update user | BSONError: hex string must be 24 characters
+1.8.2024, 20:08:08 - ERROR - Failed to update user | BSONError: hex string must be 24 characters
+1.8.2024, 20:08:42 - INFO - Server listening on port: 3030
+1.8.2024, 20:08:45 - ERROR - Failed to update user | BSONError: hex string must be 24 characters
+1.8.2024, 20:08:45 - ERROR - Failed to update user | BSONError: hex string must be 24 characters
+1.8.2024, 20:10:14 - INFO - Server listening on port: 3030
+1.8.2024, 20:10:54 - ERROR - Failed to update user | ReferenceError: userToSave is not defined
+1.8.2024, 20:10:54 - ERROR - Failed to update user | ReferenceError: userToSave is not defined
+1.8.2024, 20:11:13 - INFO - Server listening on port: 3030
+1.8.2024, 20:11:26 - INFO - Server listening on port: 3030

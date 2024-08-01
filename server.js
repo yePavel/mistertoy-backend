@@ -28,8 +28,10 @@ app.use(express.static('public'))
 // **************** Toys API ****************:
 
 import { toyRoutes } from './api/toy/toy.routes.js'
+import { userRoutes } from './api/user/user.routes.js'
 
 app.use('/api/toy', toyRoutes)
+app.use('/api/user', userRoutes)
 
 
 const port = 3030
