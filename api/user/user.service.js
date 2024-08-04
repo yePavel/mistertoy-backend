@@ -5,10 +5,10 @@ import { loggerService } from "../../services/logger.service.js"
 export const userService = {
     // query,
     getById,
-    // getByUsername,
-    // remove,
+    getByUsername,
+    remove,
     update,
-    // add,
+    add,
 }
 
 async function getById(userId) {
@@ -22,6 +22,35 @@ async function getById(userId) {
         throw err
     }
 }
+
+async function add(user) {
+    try {
+        const existUser = await getByUsername(user.username)
+        if (existUser) throw new Error('Username taken')
+
+        const userToAdd = {
+            username: user.username,
+            password: user.password,
+            fullname: user.fullname,
+        }
+        const collection = await dbService.getCollection('user')
+        await collection.insertOne(userToAdd)
+        return userToAdd
+    } catch (err) {
+        loggerService.error('cannot insert user', err)
+        throw err
+    }
+}
+async function remove(userId) {
+    try {
+        const collection = await dbService.getCollection('user')
+        await collection.deleteOne({ _id: ObjectId.createFromHexString(userId) })
+    } catch (err) {
+        loggerService.error(`cannot remove user ${userId}`, err)
+        throw err
+    }
+}
+
 async function update(user) {
     console.log('user:', user)
     try {
@@ -35,6 +64,17 @@ async function update(user) {
         return updatedUser
     } catch (err) {
         loggerService.error('Failed to update user', err)
+        throw err
+    }
+}
+
+async function getByUsername(username) {
+    try {
+        const collection = await dbService.getCollection('user')
+        const user = await collection.findOne({ username })
+        return user
+    } catch (err) {
+        logger.error(`while finding user ${username}`, err)
         throw err
     }
 }

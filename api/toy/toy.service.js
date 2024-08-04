@@ -22,13 +22,12 @@ async function query(filterBy = { txt: '', maxPrice: Infinity }) {
                     filterBy.inStock === 'true' ? { inStock: true } : {},
                 ]
         }
-        const filteredCriteria = criteria.$and.filter(field => Object.keys(field).length > 0)
-        const sortField = filterBy.sortBy || 'name'
-
+        const sortBy = { [filterBy.sortBy ? filterBy.sortBy : 'name']: +filterBy.sortDir }
         const collection = await dbService.getCollection('toy');
-        const toys = await collection.find({ $and: filteredCriteria })
-            .sort({ [sortField]: +filterBy.sortDir })
+        const toys = await collection.find(criteria)
+            .sort(sortBy)
             .toArray()
+
         return toys
     } catch (err) {
         loggerService.error('cannot find toys', err)

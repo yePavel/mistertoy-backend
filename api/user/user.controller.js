@@ -13,6 +13,16 @@ export async function getUser(req, res) {
     }
 }
 
+export async function addUser(req, res) {
+    try {
+        const user = await userService.getById(req.body)
+        res.send(user)
+    } catch (err) {
+        loggerService.error('Failed to add user', err)
+        res.status(500).send({ err: 'Failed to add user' })
+    }
+}
+
 export async function updateUser(req, res) {
     try {
         const user = await userService.update(req.body)

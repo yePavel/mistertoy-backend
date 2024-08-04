@@ -29,7 +29,9 @@ app.use(express.static('public'))
 
 import { toyRoutes } from './api/toy/toy.routes.js'
 import { userRoutes } from './api/user/user.routes.js'
+import { authRoutes } from './api/auth/auth.routes.js'
 
+app.use('/api/auth', authRoutes)
 app.use('/api/toy', toyRoutes)
 app.use('/api/user', userRoutes)
 
