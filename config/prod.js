@@ -1,4 +1,7 @@
+import dotenv from 'dotenv'
+dotenv.config()
+
 export default {
-    dbURL: 'mongodb+srv://theUser:thePass@cluster0-klgzh.mongodb.net/test?retryWrites=true&w=majority',
-    dbName: 'toys_db',
+    dbURL: process.env.DB_URL,
+    dbName: process.env.DB_NAME
 }

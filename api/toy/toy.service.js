@@ -30,7 +30,7 @@ async function query(filterBy = { txt: '', maxPrice: Infinity }) {
 
         return toys
     } catch (err) {
-        loggerService.error('cannot find toys', err)
+        loggerService.error('Cannot find toys', err)
         throw err
     }
 }
@@ -39,6 +39,7 @@ async function getById(toyId) {
     try {
         const collection = await dbService.getCollection('toy')
         const toy = await collection.findOne({ _id: ObjectId.createFromHexString(toyId) })
+        toy.createdAt = toy._id.getTimestamp()
         return toy
     } catch (err) {
         loggerService.error('Cannot find toy', err)
@@ -52,7 +53,7 @@ async function remove(toyId) {
         const deletedCount = await collection.deleteOne({ _id: ObjectId.createFromHexString(toyId) })
         return deletedCount
     } catch (err) {
-        logger.error(`cannot remove car ${carId}`, err)
+        loggerService.error(`cannot remove car ${carId}`, err)
         throw err
     }
 }

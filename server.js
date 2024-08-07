@@ -1,30 +1,40 @@
 import express from 'express'
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
+import path, { dirname } from 'path'
+import { fileURLToPath } from 'url'
 
 import { loggerService } from './services/logger.service.js'
 
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+
 const app = express()
-
-const corsOptions = {
-    origin: [
-        'http://127.0.0.1:3000',
-        'http://localhost:3000',
-
-        'http://localhost:5173',
-        'http://127.0.0.1:5173',
-
-        'http://localhost:5174',
-        'http://127.0.0.1:5174',
-    ],
-    credentials: true,
-}
 
 app.use(cookieParser()) // for res.cookies
 app.use(express.json()) // for req.body
-app.use(cors(corsOptions))
 app.use(express.static('public'))
 
+if (process.env.NODE_ENV === 'production') {
+    // Express serve static files on production environment
+    app.use(express.static(path.resolve(__dirname, 'public')))
+    console.log('__dirname: ', __dirname)
+} else {
+    // Configuring CORS
+    // Make sure origin contains the url 
+    // your frontend dev-server is running on
+    const corsOptions = {
+        origin: [
+            'http://127.0.0.1:5173',
+            'http://localhost:5173',
+
+            'http://127.0.0.1:3030',
+            'http://localhost:3030',
+        ],
+        credentials: true
+    }
+    app.use(cors(corsOptions))
+}
 // **************** Toys API ****************:
 
 import { toyRoutes } from './api/toy/toy.routes.js'
@@ -37,6 +47,7 @@ app.use('/api/user', userRoutes)
 
 
 const port = 3030
+
 app.listen(port, () => {
     loggerService.info(`Server listening on port: ${port}`)
     console.log(`Server listening on port: ${port}`)

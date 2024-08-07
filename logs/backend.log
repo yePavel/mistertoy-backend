@@ -322,3 +322,115 @@
 4.8.2024, 20:13:01 - ERROR - Failed to get toys | MongoServerError: FieldPath cannot be constructed with empty string
 4.8.2024, 20:13:48 - INFO - Server listening on port: 3030
 4.8.2024, 20:15:06 - INFO - Server listening on port: 3030
+4.8.2024, 20:24:59 - DEBUG - auth.service - login with username: admin
+4.8.2024, 20:24:59 - INFO - User login:  | {"_id":"66acf0e8a992c5fd582417a4","username":"admin","fullname":"admin admin","isAdmin":true}
+4.8.2024, 20:34:52 - ERROR - cannot find toys | MongoInvalidArgumentError: Invalid sort direction: null
+4.8.2024, 20:34:52 - ERROR - Failed to get toys | MongoInvalidArgumentError: Invalid sort direction: null
+4.8.2024, 20:34:55 - ERROR - cannot find toys | MongoInvalidArgumentError: Invalid sort direction: null
+4.8.2024, 20:34:55 - ERROR - Failed to get toys | MongoInvalidArgumentError: Invalid sort direction: null
+4.8.2024, 20:36:33 - DEBUG - auth.service - login with username: admin
+4.8.2024, 20:36:33 - INFO - User login:  | {"_id":"66acf0e8a992c5fd582417a4","username":"admin","fullname":"admin admin","isAdmin":true}
+4.8.2024, 20:40:36 - ERROR - cannot find toys | MongoInvalidArgumentError: Invalid sort direction: null
+4.8.2024, 20:40:36 - ERROR - Failed to get toys | MongoInvalidArgumentError: Invalid sort direction: null
+4.8.2024, 20:41:07 - DEBUG - auth.service - login with username: admin
+4.8.2024, 20:41:07 - INFO - User login:  | {"_id":"66acf0e8a992c5fd582417a4","username":"admin","fullname":"admin admin","isAdmin":true}
+4.8.2024, 20:45:16 - ERROR - Failed to get toys | MongoInvalidArgumentError: Invalid sort direction: null
+4.8.2024, 20:45:16 - ERROR - cannot find toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 12:48:15 - INFO - Server listening on port: 3030
+6.8.2024, 12:48:17 - INFO - Server listening on port: 3030
+6.8.2024, 12:49:04 - INFO - Server listening on port: 3030
+6.8.2024, 12:49:54 - INFO - Server listening on port: 3030
+6.8.2024, 13:22:42 - INFO - Server listening on port: 3030
+6.8.2024, 13:22:49 - INFO - Server listening on port: 3030
+6.8.2024, 13:42:19 - INFO - Server listening on port: 3030
+6.8.2024, 13:42:56 - ERROR - cannot find toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 13:42:56 - ERROR - Failed to get toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 13:43:11 - ERROR - cannot find toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 13:43:11 - ERROR - Failed to get toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 13:43:11 - ERROR - cannot find toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 13:43:11 - ERROR - Failed to get toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 13:45:19 - INFO - Server listening on port: 3030
+6.8.2024, 13:48:06 - INFO - Server listening on port: 3030
+6.8.2024, 13:48:41 - INFO - Server listening on port: 3030
+6.8.2024, 13:48:43 - INFO - Server listening on port: 3030
+6.8.2024, 13:51:17 - INFO - Server listening on port: 3030
+6.8.2024, 13:51:24 - INFO - Server listening on port: 3030
+6.8.2024, 13:51:42 - INFO - Server listening on port: 3030
+6.8.2024, 15:07:01 - INFO - Server listening on port: 3030
+6.8.2024, 15:09:50 - INFO - Server listening on port: 3030
+6.8.2024, 15:11:17 - INFO - Server listening on port: 3030
+6.8.2024, 15:25:40 - INFO - Server listening on port: 3030
+6.8.2024, 15:28:17 - INFO - Server listening on port: 3030
+6.8.2024, 15:28:21 - ERROR - cannot find toys | ReferenceError: logger is not defined
+6.8.2024, 15:28:21 - ERROR - Failed to get toys | ReferenceError: logger is not defined
+6.8.2024, 15:29:32 - INFO - Server listening on port: 3030
+6.8.2024, 15:29:36 - ERROR - cannot find toys | ReferenceError: logger is not defined
+6.8.2024, 15:29:36 - ERROR - Failed to get toys | ReferenceError: logger is not defined
+6.8.2024, 15:33:37 - INFO - Server listening on port: 3030
+6.8.2024, 15:34:04 - ERROR - cannot find toys | ReferenceError: logger is not defined
+6.8.2024, 15:34:04 - ERROR - Failed to get toys | ReferenceError: logger is not defined
+6.8.2024, 15:35:33 - INFO - Server listening on port: 3030
+6.8.2024, 15:35:39 - ERROR - cannot find toys | ReferenceError: logger is not defined
+6.8.2024, 15:35:39 - ERROR - Failed to get toys | ReferenceError: logger is not defined
+6.8.2024, 15:36:37 - ERROR - cannot find toys | ReferenceError: logger is not defined
+6.8.2024, 15:36:37 - ERROR - Failed to get toys | ReferenceError: logger is not defined
+6.8.2024, 15:37:16 - INFO - Server listening on port: 3030
+6.8.2024, 15:37:19 - ERROR - Cannot find toys | ReferenceError: logger is not defined
+6.8.2024, 15:37:19 - ERROR - Failed to get toys | ReferenceError: logger is not defined
+6.8.2024, 15:45:55 - INFO - Server listening on port: 3030
+6.8.2024, 15:46:09 - ERROR - Cannot find toys | ReferenceError: logger is not defined
+6.8.2024, 15:46:09 - ERROR - Failed to get toys | ReferenceError: logger is not defined
+6.8.2024, 15:46:59 - ERROR - Cannot find toys | ReferenceError: logger is not defined
+6.8.2024, 15:46:59 - ERROR - Failed to get toys | ReferenceError: logger is not defined
+6.8.2024, 15:47:28 - ERROR - Cannot find toys | ReferenceError: logger is not defined
+6.8.2024, 15:47:28 - ERROR - Failed to get toys | ReferenceError: logger is not defined
+6.8.2024, 15:51:13 - INFO - Server listening on port: 3030
+6.8.2024, 16:00:58 - INFO - Server listening on port: 3030
+6.8.2024, 19:21:50 - INFO - Server listening on port: 3030
+6.8.2024, 19:36:30 - INFO - Server listening on port: 3030
+6.8.2024, 19:36:46 - INFO - Server listening on port: 3030
+6.8.2024, 19:40:34 - INFO - Server listening on port: 3030
+6.8.2024, 19:52:09 - INFO - Server listening on port: 3030
+6.8.2024, 20:01:19 - INFO - Server listening on port: 3030
+6.8.2024, 21:07:55 - INFO - Server listening on port: 3030
+6.8.2024, 21:07:58 - ERROR - Cannot find toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 21:07:58 - ERROR - Failed to get toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 21:07:59 - ERROR - Cannot find toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 21:07:59 - ERROR - Failed to get toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 21:08:04 - ERROR - Cannot find toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 21:08:04 - ERROR - Failed to get toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 21:08:05 - ERROR - Cannot find toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 21:08:05 - ERROR - Failed to get toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 21:08:51 - ERROR - Cannot find toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 21:08:51 - ERROR - Failed to get toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 21:08:59 - ERROR - Cannot find toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 21:08:59 - ERROR - Failed to get toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 21:09:04 - ERROR - Cannot find toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 21:09:04 - ERROR - Failed to get toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 21:09:05 - ERROR - Cannot find toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 21:09:05 - ERROR - Failed to get toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 21:09:06 - ERROR - Cannot find toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 21:09:06 - ERROR - Failed to get toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 21:09:09 - ERROR - Cannot find toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 21:09:09 - ERROR - Failed to get toys | MongoInvalidArgumentError: Invalid sort direction: null
+6.8.2024, 21:09:29 - INFO - Server listening on port: 3030
+6.8.2024, 21:10:35 - INFO - Server listening on port: 3030
+6.8.2024, 21:12:49 - INFO - Server listening on port: 3030
+6.8.2024, 21:12:58 - DEBUG - auth.service - login with username: admin
+6.8.2024, 21:12:58 - INFO - User login:  | {"_id":"66acf0e8a992c5fd582417a4","username":"admin","fullname":"admin admin","isAdmin":true}
+6.8.2024, 21:15:24 - INFO - Server listening on port: 3030
+6.8.2024, 21:21:47 - INFO - Server listening on port: 3030
+7.8.2024, 18:26:23 - INFO - Server listening on port: 3030
+7.8.2024, 18:26:35 - INFO - Server listening on port: 3030
+7.8.2024, 18:28:19 - INFO - Server listening on port: 3030
+7.8.2024, 18:28:20 - INFO - Server listening on port: 3030
+7.8.2024, 18:28:27 - INFO - Server listening on port: 3030
+7.8.2024, 18:30:12 - INFO - Server listening on port: 3030
+7.8.2024, 18:30:16 - INFO - Server listening on port: 3030
+7.8.2024, 18:31:11 - INFO - Server listening on port: 3030
+7.8.2024, 18:31:33 - INFO - Server listening on port: 3030
+7.8.2024, 18:32:27 - INFO - Server listening on port: 3030
+7.8.2024, 18:35:42 - INFO - Server listening on port: 3030
+7.8.2024, 18:36:02 - INFO - Server listening on port: 3030
+7.8.2024, 18:36:14 - INFO - Server listening on port: 3030
+7.8.2024, 18:36:17 - INFO - Server listening on port: 3030

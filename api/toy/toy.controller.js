@@ -4,7 +4,14 @@ import { toyService } from "./toy.service.js";
 
 export async function getToys(req, res) {
     try {
-        const { filterBy } = req.query
+        // const filterBy = req.query
+        const filterBy = {
+            txt: req.query.txt || '',
+            maxPrice: req.query.maxPrice || '',
+            inStock: req.query.inStock || 'false',
+            sortBy: req.query.sortBy || '',
+            sortDir: req.query.sortDir || '1'
+        }
         const toys = await toyService.query(filterBy)
         res.json(toys)
     } catch (err) {
@@ -25,6 +32,7 @@ export async function getToyById(req, res) {
 }
 
 export async function addToy(req, res) {
+    const { loggedinUser } = req
     try {
         const { name, price, labels, inStock } = req.body
         const toy = {
@@ -33,6 +41,7 @@ export async function addToy(req, res) {
             inStock,
             labels
         }
+        toy.owner = loggedinUser
         const addedToy = await toyService.save(toy)
         res.json(addedToy)
     } catch (err) {
