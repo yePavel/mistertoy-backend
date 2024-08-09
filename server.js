@@ -40,10 +40,15 @@ if (process.env.NODE_ENV === 'production') {
 import { toyRoutes } from './api/toy/toy.routes.js'
 import { userRoutes } from './api/user/user.routes.js'
 import { authRoutes } from './api/auth/auth.routes.js'
+import { setupAsyncLocalStorage } from './middlewares/setupAls.middleware.js'
+import { reviewRoutes } from './api/review/review.routes.js'
+
+app.all('*', setupAsyncLocalStorage)
 
 app.use('/api/auth', authRoutes)
 app.use('/api/toy', toyRoutes)
 app.use('/api/user', userRoutes)
+app.use('/api/review', reviewRoutes)
 
 
 const port = 3030

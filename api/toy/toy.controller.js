@@ -4,13 +4,12 @@ import { toyService } from "./toy.service.js";
 
 export async function getToys(req, res) {
     try {
-        // const filterBy = req.query
         const filterBy = {
-            txt: req.query.txt || '',
-            maxPrice: req.query.maxPrice || '',
-            inStock: req.query.inStock || 'false',
-            sortBy: req.query.sortBy || '',
-            sortDir: req.query.sortDir || '1'
+            txt: req.query.filterBy.txt || '',
+            maxPrice: req.query.filterBy.maxPrice || '',
+            inStock: req.query.filterBy.inStock || 'false',
+            sortBy: req.query.filterBy.sortBy || '',
+            sortDir: req.query.filterBy.sortDir || '1'
         }
         const toys = await toyService.query(filterBy)
         res.json(toys)
@@ -28,6 +27,38 @@ export async function getToyById(req, res) {
     } catch (err) {
         loggerService.error('Failed to get toy', err)
         res.status(500).send({ err: 'Failed to get toy' })
+    }
+}
+
+export async function getLabelCount(req, res) {
+    try {
+        const filterBy = {
+            txt: req.query.txt || '',
+            maxPrice: req.query.maxPrice || '',
+            inStock: req.query.inStock || 'false',
+            sortBy: req.query.sortBy || '',
+            sortDir: req.query.sortDir || '1'
+        }
+        const toys = await toyService.query(filterBy)
+
+        const labelCounts = {}
+        toys.forEach(toy => {
+            toy.labels.forEach(label => {
+                if (labelCounts[label])
+                    labelCounts[label]++
+                else labelCounts[label] = 1
+            });
+        })
+        const labelsArray = Object.entries(labelCounts).map(
+            ([label, count]) => ({
+                label,
+                count
+            })
+        )
+        res.json(labelsArray)
+    }
+    catch (err) {
+        res.status(500).send({ err: 'Failed to get toys count', err })
     }
 }
 
