@@ -50,7 +50,8 @@ async function query(filterBy = {}) {
             }
             review.toy = {
                 _id: review.toy._id,
-                name: review.toy.name
+                name: review.toy.name,
+                price: review.toy.price
             }
             review.createdAt = review._id.getTimestamp()
             delete review.byUser.password
@@ -82,9 +83,20 @@ async function add(review, byUser) {
         loggerService.error('cannot add review', err)
         throw err
     }
-
 }
-async function remove() {
 
-
+async function remove(reviewId) {
+    console.log("🚀 ~ remove ~ reviewId:", reviewId)
+    try {
+        const criteria = {
+            _id: ObjectId.createFromHexString(reviewId)
+        }
+        const collection = await dbService.getCollection('review')
+        const { deletedCount } = await collection.deleteOne(criteria)
+        return deletedCount
+    } catch (err) {
+        loggerService.error(`cannot remove review ${reviewId}`, err)
+        throw err
+    }
 }
+

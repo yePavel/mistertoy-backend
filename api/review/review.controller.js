@@ -29,4 +29,14 @@ export async function addReview(req, res) {
     }
 }
 
-
+export async function deleteReview(req, res) {
+    const { reviewId } = req.params
+    try {
+        const deletedCount = await reviewService.remove(reviewId)
+        res.send({ msg: `deleted successfully ${deletedCount}`, })
+    } catch (err) {
+        loggerService.error(`Failed to delete review ${reviewId}`, err)
+        res.status(400).send({ err: 'Failed to delete review' })
+        throw err
+    }
+}
