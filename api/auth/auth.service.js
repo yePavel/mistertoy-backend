@@ -14,7 +14,7 @@ export const authService = {
 const cryptr = new Cryptr(process.env.SECRET1 || 'Secret-Puk-1234')
 
 async function login(username, password) {
-    loggerService.debug(`auth.service - login with username: ${username}`)
+    loggerService.info(`auth.service - login with username: ${username}`)
 
     const user = await userService.getByUsername(username)
     if (!user) throw new Error('Invalid username or password')

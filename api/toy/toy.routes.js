@@ -5,7 +5,7 @@ import { log } from '../../middlewares/logger.middleware.js'
 
 export const toyRoutes = express.Router()
 
-toyRoutes.get('/', log, getToys)
+toyRoutes.get('/', getToys)
 toyRoutes.get('/dashboard', getLabelCount)
 toyRoutes.get('/:toyId', getToyById)
 toyRoutes.post('/', requireAuth, addToy)
